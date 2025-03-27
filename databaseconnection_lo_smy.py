@@ -1,6 +1,8 @@
 """
 This will connect to the oracle database and create a dataframe and write the results to a csv file
 
+the query is for one specific employee
+
 """
 import oracledb
 import csv
@@ -17,8 +19,8 @@ DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("NewDusty")
 def runquery():
 
     connection = oracledb.connect(
-            user="penta",
-            password="prodhf_7yrgd",
+            user="user",
+            password=<...>,
             dsn="PROD")
 
     print("Successfully connected to Oracle Database")
